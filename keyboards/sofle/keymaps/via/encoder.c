@@ -28,9 +28,12 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
         }
     } else if (index == 1) {
         if (clockwise) {
-            tap_code(KC_PGDOWN);
+            tap_code(KC_LCTRL);
+            tap_code(KC_TAB);
         } else {
-            tap_code(KC_PGUP);
+            tap_code(KC_LCTRL);
+            tap_code(KC_LSHIFT);
+            tap_code(KC_TAB);
         }
     }
     return true;
